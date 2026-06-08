@@ -1,0 +1,10 @@
+# Configuration de démarrage pour MkAspera avec AMI
+# AMI arrive dans la capsule avec ses composants essentiels
+
+
+universeFalseBooleans:
+  - waterworkfix_companion_loaded
+
+unlockedBuildings:
+  - !building ice_mine_purification_plant
+  - !building building_water_hub

@@ -1,0 +1,6 @@
+popup_missing_waterworkfix:
+  titleId: BE_popup_missing_waterworkfix_title
+  subtitleId: BE_popup_missing_waterworkfix_subtitle
+  descriptionId: BE_popup_missing_waterworkfix_desc
+  buttonId: BE_popup_missing_waterworkfix_btn
+  buttonAction: None

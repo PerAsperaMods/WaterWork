@@ -1,0 +1,210 @@
+technology_terraforming_oxygen_release_plant_2:
+  actions:
+    - arguments:
+        - PlayerFaction
+        - building_terraforming_oxygen_release_plant_2
+      command: UnlockBuilding
+      daysDelay: 0.0
+  isLane: false
+  name: BE_technology_terraforming_oxygen_release_plant_name_2
+  description: BE_technology_terraforming_oxygen_release_plant_description_2
+  iconName: Sprite/oxy_plant_2.png
+  popupImageName: Sprite/oxy_plant_2.png
+  popupSecondaryImageName: Popups/Images/IMG_PU_Category_Biotech_BG
+  requiredResearchPoints: 10000.0
+  requirements:
+    - !technology technology_lane_life_support_4
+    - !technology technology_terraforming_oxygen_capture_plant
+  connections: {}
+  isPlaceholder: false
+  position: 3
+
+
+technology_terraforming_oxygen_release_plant_3:
+  actions:
+    - arguments:
+        - PlayerFaction
+        - building_terraforming_oxygen_release_plant_3
+      command: UnlockBuilding
+      daysDelay: 0.0
+  isLane: false
+  name: BE_technology_terraforming_oxygen_release_plant_name_3
+  description: BE_technology_terraforming_oxygen_release_plant_description_3
+  iconName: Sprite/oxy_plant_3.png
+  popupImageName: Sprite/oxy_plant_3.png
+  popupSecondaryImageName: Popups/Images/IMG_PU_Category_Biotech_BG
+  requiredResearchPoints: 25000.0
+  requirements:
+    - !technology technology_lane_life_support_5
+    - !technology technology_terraforming_oxygen_release_plant_2
+
+  connections: {}
+  isPlaceholder: false
+  position: 3
+
+
+
+technology_ice_refinery_plant:
+  isLane: false
+  name: BE_technology_ice_purification_plant_name
+  description: BE_technology_ice_purification_plant_desc
+  iconName: Sprite/ice_mine_purification.png
+  popupImageName: Sprite/ice_mine_purification.png
+  popupSecondaryImageName: Popups/Images/IMG_PU_Category_Aquatic_BG
+  requiredResearchPoints: 200.0
+  actions:
+    - command: UnlockBuilding
+      daysDelay: 0.0
+      arguments:
+      - PlayerFaction
+      - ice_mine_purification_plant_2
+  connections: {}
+  isPlaceholder: false
+  position: 9
+  requirements:
+    - !technology technology_lane_life_support_0
+
+technology_water_distribution:
+  requirements:
+    - !technology technology_ice_refinery_plant
+  actions:
+    - command: UnlockBuilding
+      daysDelay: 0.0
+      arguments:
+        - PlayerFaction
+        - building_food_factory_2
+
+technology_ice_refinery_plant_2:
+  isLane: false
+  name: BE_technology_ice_purification_plant_name_2
+  description: BE_technology_ice_purification_plant_desc_2
+  iconName: Sprite/ice_mine_purification_2.png
+  popupImageName: Sprite/ice_mine_purification_2.png
+  popupSecondaryImageName: Popups/Images/IMG_PU_Category_Aquatic_BG
+  requiredResearchPoints: 750.0
+  actions:
+    - command: UnlockBuilding
+      daysDelay: 0.0
+      arguments:
+        - PlayerFaction
+        - ice_mine_purification_plant_3
+  connections: {}
+  isPlaceholder: false
+  position: 9
+  requirements:
+    - !technology technology_lane_life_support_2
+    - !technology technology_water_distribution
+
+
+#    - command: UnlockBuilding
+#      daysDelay: 0.0
+#      arguments:
+#      - PlayerFaction
+#      - 
+
+
+technology_building_food_factory_3:
+  isLane: false
+  name: BE_technology_food_factory_3_name
+  description: BE_technology_food_factory_3_desc
+  iconName: BuildIcons/Icon_Food_3
+  popupImageName: Popups/Images/IMG_PU_Biology_CraterFarms
+  popupSecondaryImageName: Popups/Images/IMG_PU_Category_Biotech_BG
+  requiredResearchPoints: 750.0
+  actions:
+    - command: UnlockBuilding
+      daysDelay: 0.0
+      arguments:
+        - PlayerFaction
+        - building_food_factory_3
+  connections: {}
+  isPlaceholder: false
+  position: 9
+  requirements:
+    - !technology technology_lane_life_support_4
+#    - !technology technology_crater_farm
+
+technology_farm_open:
+  !replace requirements:
+    - !technology technology_lane_life_support_5
+#      technology_building_food_factory_3
+    - !technology technology_bioengineered_animals
+
+
+technology_crater_farm:
+  !replace requirements:
+    - !technology technology_lane_life_support_3
+  actions:
+    - command: UnlockBuilding
+      daysDelay: 0.0
+      arguments:
+        - PlayerFaction
+        - building_crater_lake
+
+
+technology_factory_upgrade_2:
+  !replace actions:
+    - command: UnlockBuilding
+      daysDelay: 0.0
+      arguments:
+        - PlayerFaction
+        - building_steel_factory_2
+    - command: UnlockBuilding
+      daysDelay: 0.0
+      arguments:
+        - PlayerFaction
+        - building_glass_factory_2
+    - command: UnlockBuilding
+      daysDelay: 0.0
+      arguments:
+        - PlayerFaction
+        - building_electronics_factory_2
+    - command: UnlockBuilding
+      daysDelay: 0.0
+      arguments:
+        - PlayerFaction
+        - building_polymers_factory_2
+    - command: UnlockBuilding
+      daysDelay: 0.0
+      arguments:
+        - PlayerFaction
+        - building_parts_factory_2
+    - command: UnlockBuilding
+      daysDelay: 0.0
+      arguments:
+        - PlayerFaction
+        - building_drone_factory_2
+
+
+technology_factory_upgrade_3:
+  !replace actions:
+    - command: UnlockBuilding
+      daysDelay: 0.0
+      arguments:
+        - PlayerFaction
+        - building_steel_factory_3
+    - command: UnlockBuilding
+      daysDelay: 0.0
+      arguments:
+        - PlayerFaction
+        - building_glass_factory_3
+    - command: UnlockBuilding
+      daysDelay: 0.0
+      arguments:
+        - PlayerFaction
+        - building_electronics_factory_3
+    - command: UnlockBuilding
+      daysDelay: 0.0
+      arguments:
+        - PlayerFaction
+        - building_polymers_factory_3
+    - command: UnlockBuilding
+      daysDelay: 0.0
+      arguments:
+        - PlayerFaction
+        - building_parts_factory_3
+    - command: UnlockBuilding
+      daysDelay: 0.0
+      arguments:
+        - PlayerFaction
+        - building_drone_factory_3

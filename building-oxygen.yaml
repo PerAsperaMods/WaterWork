@@ -1,0 +1,82 @@
+building_terraforming_oxygen_release_plant:
+  !replace inputResources:
+    !resource resource_chemicals: 1
+  gasReleaseAmount: 0.0002  # 60 years per mb at full efficiency
+  powerConsumption: 5.0  
+  pipesConsumption: 1
+  displayInputs:
+    - !resource resource_water_flow
+
+building_terraforming_oxygen_release_plant_2:
+  availability: PLAYER_ONLY
+  categoryType: !buildingCategory category_terraforming_atmosphere
+  compactName: OxygPla
+  description: BE_building_terraforming_oxygen_release_plant_description
+  droneCapacity: 1
+  healthLossPerDay: 0.05
+  !replace inputResources:
+    !resource resource_chemicals: 1
+  knowledge: !knowledge knowledge_oxygen_release_plant
+  maxHealth: 150.0
+  name: BE_building_terraforming_oxygen_release_plant_name
+  outputQuantity: 2
+  outputResource: !resource resource_oxygen_release
+  gasReleaseAmount: 0.0005  # 60 years per mb at full efficiency
+  powerConsumption: 20.0
+  prefabName: OxygenRelease
+  rubblePrefabName: RubblePile_M
+  progressPerDay: 0.1
+  requiredConstructionResources:
+    !resource resource_aluminum: 10
+    !resource resource_steel: 10
+    !resource resource_polymers: 10
+  requiredResourceVein: null
+  reservedRadius: 30.0
+  waySnapRadius: 10.0
+  rivalIconName: Sprite/oxy_plant_2.png
+  iconName: Sprite/oxy_plant_2.png
+  progressBarNames:
+    - Progress_OxygenReleasePlant
+  categorySoundOverride: Sfx_Gameplay_BuildingBIP_Atmosphere_OxygenRelease
+  pipesConsumption: 5
+  isUpgradeTo:
+    - !building building_terraforming_oxygen_release_plant
+  displayInputs:
+    - !resource resource_water_flow
+
+building_terraforming_oxygen_release_plant_3:
+  availability: PLAYER_ONLY
+  categoryType: !buildingCategory category_terraforming_atmosphere
+  compactName: OxygPla
+  description: BE_building_terraforming_oxygen_release_plant_description
+  droneCapacity: 1
+  healthLossPerDay: 0.05
+  !replace inputResources:
+    !resource resource_chemicals: 3
+  knowledge: !knowledge knowledge_oxygen_release_plant
+  maxHealth: 150.0
+  name: BE_building_terraforming_oxygen_release_plant_name
+  outputQuantity: 5
+  outputResource: !resource resource_oxygen_release
+  gasReleaseAmount: 0.001  # 60 years per mb at full efficiency
+  powerConsumption: 40.0
+  prefabName: OxygenRelease
+  rubblePrefabName: RubblePile_M
+  progressPerDay: 0.1
+  requiredConstructionResources:
+    !resource resource_aluminum: 20
+    !resource resource_steel: 20
+    !resource resource_polymers: 20
+  requiredResourceVein: null
+  reservedRadius: 30.0
+  waySnapRadius: 10.0
+  rivalIconName: Sprite/oxy_plant_3.png
+  iconName: Sprite/oxy_plant_3.png
+  progressBarNames:
+    - Progress_OxygenReleasePlant
+  categorySoundOverride: Sfx_Gameplay_BuildingBIP_Atmosphere_OxygenRelease
+  pipesConsumption: 10
+  isUpgradeTo:
+    - !building building_terraforming_oxygen_release_plant_2
+  displayInputs:
+    - !resource resource_water_flow

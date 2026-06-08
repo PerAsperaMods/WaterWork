@@ -1,0 +1,255 @@
+building_colony_basic:
+  !replace inputResources:
+    !resource resource_food: 1
+  pipesConsumption: 10
+
+building_colony_small:
+  !replace inputResources:
+    !resource resource_food: 5
+  pipesConsumption: 15
+
+building_colony_medium:
+  !replace inputResources:
+    !resource resource_food: 10
+  pipesConsumption: 20
+
+#building_research_lab_aquatic:
+
+building_research_lab:
+  !replace inputResources:
+    !resource resource_food: 1
+  pipesConsumption: 5
+
+building_water_hub:
+  !replace pipesClusterRadius: 250
+  !replace requiredConstructionResources:
+    !resource resource_aluminum: 5
+    !resource resource_steel: 5
+    !resource resource_polymers: 5
+
+
+building_water_hub_2:
+  categoryType: !buildingCategory category_terraforming_life
+  compactName: WaHub
+  description: BE_building_water_hub_2_desc
+  droneCapacity: 1
+  healthLossPerDay: 0.05
+  inputResources: {}
+  knowledge: !knowledge knowledge_water_hub
+  maxHealth: 125.0
+  name: BE_building_water_hub_2_name
+  outputQuantity: 0
+  outputResource: null
+  powerConsumption: 10
+  prefabName: PipeHub
+  rubblePrefabName: RubblePile_M
+  progressPerDay: 0.1
+  requiredConstructionResources:
+    !resource resource_aluminum: 10
+    !resource resource_steel: 10
+    !resource resource_polymers: 15
+  requiredResourceVein: null
+  reservedRadius: 20.0
+  waySnapRadius: 10.0
+  rivalIconName: Sprite/water_hub_2.png
+  iconName: Sprite/water_hub_2.png
+  extendsPipesCluster: true
+  pipesClusterRadius: 500
+  categorySoundOverride: Sfx_Gameplay_BuildingBIP_Life_WaterBoosterPump
+
+
+
+
+ice_mine_purification_plant:
+  categoryType: !buildingCategory category_colonies
+  compactName: TherPla
+  description: BE_building_ice_purification_plant_desc
+  droneCapacity: 1
+  healthLossPerDay: 0.05
+  #knowledge: !knowledge knowledge_thermal_plant
+  maxHealth: 200.0
+  name: BE_building_ice_purification_plant_name
+  inputResources: {}
+  outputQuantity: 0
+  outputResource: null
+  prefabName: ThermalPlant
+  rubblePrefabName: RubblePile_M
+  progressPerDay: 0.1
+  requiredConstructionResources:
+     !resource resource_steel: 3
+     !resource resource_polymers: 3
+     !resource resource_glass: 3
+     !resource resource_aluminum: 3
+  reservedRadius: 40.0
+  waySnapRadius: 20.0
+  rivalIconName: Sprite/ice_mine_purification_1.png
+  iconName: Sprite/ice_mine_purification_1.png
+  progressBarNames:
+    - Progress_Torus_20x2
+  jumpRadius: 200.0
+  isWorkerHub: false
+  pipesProduction: 20
+  needsEvenTerrain: true
+  extendsPipesCluster: false
+  pipesClusterRadius: 150
+  #waterNeededFactor: 0.0 #0.2
+  #waterNeededRadius: 0.0
+  categorySoundOverride: Sfx_Gameplay_BuildingBIP_Life_WaterTreatment
+  requiredResourceVein: !resource resource_water
+  extractionLevel: 1
+  powerConsumption: 10.0
+  powerPriority: 3.0
+  displayInputs:
+    - !resource resource_water
+
+
+ice_mine_purification_plant_2:
+  categoryType: !buildingCategory category_colonies
+  compactName: TherPla
+  description: BE_building_ice_purification_plant_desc_2
+  droneCapacity: 1
+  healthLossPerDay: 0.05
+  #knowledge: !knowledge knowledge_thermal_plant
+  maxHealth: 200.0
+  name: BE_building_ice_purification_plant_name_2
+  outputQuantity: 0
+  outputResource: null
+  prefabName: ThermalPlant
+  rubblePrefabName: RubblePile_M
+  progressPerDay: 0.1
+  requiredConstructionResources:
+     !resource resource_steel: 6
+     !resource resource_polymers: 6
+     !resource resource_glass: 6
+     !resource resource_aluminum: 6
+  reservedRadius: 40.0
+  waySnapRadius: 20.0
+  rivalIconName: Sprite/ice_mine_purification_2.png
+  iconName: Sprite/ice_mine_purification_2.png
+  progressBarNames:
+    - Progress_Torus_20x2
+  jumpRadius: 200.0
+  isWorkerHub: false
+  pipesProduction: 30
+  needsEvenTerrain: true
+  extendsPipesCluster: false
+  pipesClusterRadius: 200
+  #waterNeededFactor: 0.0 #0.2
+  #waterNeededRadius: 0.0
+  categorySoundOverride: Sfx_Gameplay_BuildingBIP_Life_WaterTreatment
+  requiredResourceVein: !resource resource_water
+  extractionLevel: 2
+  powerConsumption: 15.0
+  powerPriority: 3.0
+  isUpgradeTo:
+    - !building ice_mine_purification_plant
+  displayInputs:
+    - !resource resource_water
+
+
+ice_mine_purification_plant_3:
+  categoryType: !buildingCategory category_colonies
+  compactName: TherPla
+  description: BE_building_ice_purification_plant_desc_3
+  droneCapacity: 1
+  healthLossPerDay: 0.05
+  #knowledge: !knowledge knowledge_thermal_plant
+  maxHealth: 200.0
+  name: BE_building_ice_purification_plant_name_3
+  outputQuantity: 0
+  outputResource: null
+  prefabName: ThermalPlant
+  rubblePrefabName: RubblePile_M
+  progressPerDay: 0.1
+  requiredConstructionResources:
+     !resource resource_steel: 15
+     !resource resource_polymers: 15
+     !resource resource_glass: 15
+     !resource resource_aluminum: 15
+  reservedRadius: 40.0
+  waySnapRadius: 20.0
+  rivalIconName: Sprite/ice_mine_purification_3.png
+  iconName: Sprite/ice_mine_purification_3.png
+  progressBarNames:
+    - Progress_Torus_20x2
+  jumpRadius: 200.0
+  isWorkerHub: false
+  pipesProduction: 40
+  needsEvenTerrain: true
+  extendsPipesCluster: false
+  pipesClusterRadius: 250
+  #waterNeededFactor: 0.0 #0.2
+  #waterNeededRadius: 0.0
+  categorySoundOverride: Sfx_Gameplay_BuildingBIP_Life_WaterTreatment
+  requiredResourceVein: !resource resource_water
+  extractionLevel: 3
+  powerConsumption: 20.0
+  powerPriority: 3.0    
+  isUpgradeTo:
+    - !building ice_mine_purification_plant_2
+  displayInputs:
+    - !resource resource_water
+
+
+
+building_crater_lake:
+  availability: PLAYER_ONLY
+  categoryType: !buildingCategory category_terraforming_life
+  compactName: CrtLak
+  description: BE_building_crater_lake_desc
+  droneCapacity: 1
+  healthLossPerDay: 0.02
+  inputResources: {}
+  maxHealth: 250.0
+  name: BE_building_crater_lake_name
+  outputQuantity: 0
+  outputResource: null
+  powerConsumption: 40.0
+  powerPriority: 2.0
+  prefabName: CraterFarm
+  rubblePrefabName: RubblePile_L
+  progressPerDay: 0.05
+  requiredConstructionResources:
+    !resource resource_aluminum: 25
+    !resource resource_steel: 20
+    !resource resource_polymers: 15
+    !resource resource_glass: 20
+  requiredResourceVein: !resource resource_crater
+  reservedRadius: 80.0
+  waySnapRadius: 20.0
+  jumpRadius: 100.0
+  rivalIconName: BuildIcons_Rival/Icon_CraterFarms
+  iconName: BuildIcons/Icon_CraterFarms
+  progressBarNames:
+    - Progress_Torus_20x2
+  needsEvenTerrain: false
+  pipesConsumption: 20
+  categorySoundOverride: Sfx_Gameplay_BuildingBIP_Life_WaterTreatment
+
+
+building_food_factory:
+  !replace inputResources:
+    !resource resource_chemicals: 1
+  pipesConsumption: 5
+  needsEvenTerrain: true
+  extendsPipesCluster: false
+  pipesClusterRadius: 200
+
+
+
+building_food_factory_3:
+  !replace inputResources:
+    !resource resource_chemicals: 1
+  pipesConsumption: 5
+  needsEvenTerrain: true
+  extendsPipesCluster: false
+  pipesClusterRadius: 200
+
+
+building_food_factory_2:
+  !replace inputResources:
+    !resource resource_chemicals: 1
+  pipesConsumption: 5
+  needsEvenTerrain: true
+  extendsPipesCluster: false
+  pipesClusterRadius: 200    

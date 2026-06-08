@@ -1,0 +1,50 @@
+modId: "WaterWork"
+compatibleGameVersions:
+  - "1.8.x"
+initialSetup: initialSetup.yaml
+languages:
+  filenames:
+    - languages.yaml
+  replace: false
+#buildingCategory:
+#  filenames:
+#    - building-category.yaml
+#  replace: false
+building:
+  filenames:
+    - building.yaml
+    - building-oxygen.yaml
+
+  replace: false
+technology:
+  filenames:
+    - technology.yaml
+  replace: false
+#enhancements:
+#  filenames:
+#    - enhancements.yaml
+#  replace: false  
+#quest:
+#  filenames:
+#    - quest.yaml
+#  replace: false    
+#project:
+#  filenames:
+#    - project.yaml
+#  replace: false
+rule:
+  filenames:
+    - rule.yaml
+  replace: false
+popup:
+  filenames:
+    - popup.yaml
+  replace: false
+#person:
+#  filenames:
+#    - person.yaml
+#  replace: false  
+#resource:
+#  filenames:
+#    - resource.yaml
+#  replace: false  
