@@ -1,4 +1,4 @@
-technology_terraforming_oxygen_release_plant_2:
+﻿technology_terraforming_oxygen_release_plant_2:
   actions:
     - arguments:
         - PlayerFaction
@@ -73,6 +73,13 @@ technology_water_distribution:
       arguments:
         - PlayerFaction
         - building_food_factory_2
+    - arguments:
+        - PlayerFaction
+        - enhancement_Water_flow
+      command: UnlockEnhancement
+
+
+
 
 technology_ice_refinery_plant_2:
   isLane: false
@@ -208,3 +215,4 @@ technology_factory_upgrade_3:
       arguments:
         - PlayerFaction
         - building_drone_factory_3
+

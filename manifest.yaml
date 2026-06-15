@@ -1,4 +1,4 @@
-modId: "WaterWork"
+﻿modId: "WaterWork"
 compatibleGameVersions:
   - "1.8.x"
 initialSetup: initialSetup.yaml
@@ -20,10 +20,10 @@ technology:
   filenames:
     - technology.yaml
   replace: false
-#enhancements:
-#  filenames:
-#    - enhancements.yaml
-#  replace: false  
+enhancements:
+  filenames:
+    - enhancements.yaml
+  replace: false  
 #quest:
 #  filenames:
 #    - quest.yaml
@@ -48,3 +48,4 @@ popup:
 #  filenames:
 #    - resource.yaml
 #  replace: false  
+

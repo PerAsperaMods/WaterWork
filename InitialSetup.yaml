@@ -1,8 +1,4 @@
-# Configuration de démarrage pour MkAspera avec AMI
-# AMI arrive dans la capsule avec ses composants essentiels
-
-
-universeFalseBooleans:
+﻿universeFalseBooleans:
   - waterworkfix_companion_loaded
 
 unlockedBuildings:

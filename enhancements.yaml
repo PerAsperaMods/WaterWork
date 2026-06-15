@@ -1,0 +1,6 @@
+﻿enhancement_Water_flow:
+  name: BE_enhancement_Water_flow_name
+  description: BE_enhancement_Water_flow_description
+  iconName: General Icons/WaterFlow
+  modifiers:
+    - "water_flow_mode: 1"

@@ -1,11 +1,13 @@
+﻿# building_terraforming_oxygen_release_plant T1/T2/T3
+# inputResources and pipesConsumption now handled by enhancement_Water_flow (WaterWorkFix C#).
+# Vanilla provides {water:1, chemicals:1} -- C# removes water and sets pipesConsumption on unlock.
+
 building_terraforming_oxygen_release_plant:
-  !replace inputResources:
-    !resource resource_chemicals: 1
-  gasReleaseAmount: 0.0002  # 60 years per mb at full efficiency
-  powerConsumption: 5.0  
-  pipesConsumption: 1
+  gasReleaseAmount: 0.0002
+  powerConsumption: 5.0
   displayInputs:
     - !resource resource_water_flow
+
 
 building_terraforming_oxygen_release_plant_2:
   availability: PLAYER_ONLY
@@ -14,14 +16,12 @@ building_terraforming_oxygen_release_plant_2:
   description: BE_building_terraforming_oxygen_release_plant_description
   droneCapacity: 1
   healthLossPerDay: 0.05
-  !replace inputResources:
-    !resource resource_chemicals: 1
   knowledge: !knowledge knowledge_oxygen_release_plant
   maxHealth: 150.0
   name: BE_building_terraforming_oxygen_release_plant_name
   outputQuantity: 2
   outputResource: !resource resource_oxygen_release
-  gasReleaseAmount: 0.0005  # 60 years per mb at full efficiency
+  gasReleaseAmount: 0.0005
   powerConsumption: 20.0
   prefabName: OxygenRelease
   rubblePrefabName: RubblePile_M
@@ -38,11 +38,11 @@ building_terraforming_oxygen_release_plant_2:
   progressBarNames:
     - Progress_OxygenReleasePlant
   categorySoundOverride: Sfx_Gameplay_BuildingBIP_Atmosphere_OxygenRelease
-  pipesConsumption: 5
   isUpgradeTo:
     - !building building_terraforming_oxygen_release_plant
   displayInputs:
     - !resource resource_water_flow
+
 
 building_terraforming_oxygen_release_plant_3:
   availability: PLAYER_ONLY
@@ -51,14 +51,12 @@ building_terraforming_oxygen_release_plant_3:
   description: BE_building_terraforming_oxygen_release_plant_description
   droneCapacity: 1
   healthLossPerDay: 0.05
-  !replace inputResources:
-    !resource resource_chemicals: 3
   knowledge: !knowledge knowledge_oxygen_release_plant
   maxHealth: 150.0
   name: BE_building_terraforming_oxygen_release_plant_name
   outputQuantity: 5
   outputResource: !resource resource_oxygen_release
-  gasReleaseAmount: 0.001  # 60 years per mb at full efficiency
+  gasReleaseAmount: 0.001
   powerConsumption: 40.0
   prefabName: OxygenRelease
   rubblePrefabName: RubblePile_M
@@ -75,7 +73,6 @@ building_terraforming_oxygen_release_plant_3:
   progressBarNames:
     - Progress_OxygenReleasePlant
   categorySoundOverride: Sfx_Gameplay_BuildingBIP_Atmosphere_OxygenRelease
-  pipesConsumption: 10
   isUpgradeTo:
     - !building building_terraforming_oxygen_release_plant_2
   displayInputs:

@@ -1,26 +1,4 @@
-building_colony_basic:
-  !replace inputResources:
-    !resource resource_food: 1
-  pipesConsumption: 10
-
-building_colony_small:
-  !replace inputResources:
-    !resource resource_food: 5
-  pipesConsumption: 15
-
-building_colony_medium:
-  !replace inputResources:
-    !resource resource_food: 10
-  pipesConsumption: 20
-
-#building_research_lab_aquatic:
-
-building_research_lab:
-  !replace inputResources:
-    !resource resource_food: 1
-  pipesConsumption: 5
-
-building_water_hub:
+﻿building_water_hub:
   !replace pipesClusterRadius: 250
   !replace requiredConstructionResources:
     !resource resource_aluminum: 5
@@ -92,8 +70,6 @@ ice_mine_purification_plant:
   needsEvenTerrain: true
   extendsPipesCluster: false
   pipesClusterRadius: 150
-  #waterNeededFactor: 0.0 #0.2
-  #waterNeededRadius: 0.0
   categorySoundOverride: Sfx_Gameplay_BuildingBIP_Life_WaterTreatment
   requiredResourceVein: !resource resource_water
   extractionLevel: 1
@@ -109,7 +85,6 @@ ice_mine_purification_plant_2:
   description: BE_building_ice_purification_plant_desc_2
   droneCapacity: 1
   healthLossPerDay: 0.05
-  #knowledge: !knowledge knowledge_thermal_plant
   maxHealth: 200.0
   name: BE_building_ice_purification_plant_name_2
   outputQuantity: 0
@@ -134,8 +109,6 @@ ice_mine_purification_plant_2:
   needsEvenTerrain: true
   extendsPipesCluster: false
   pipesClusterRadius: 200
-  #waterNeededFactor: 0.0 #0.2
-  #waterNeededRadius: 0.0
   categorySoundOverride: Sfx_Gameplay_BuildingBIP_Life_WaterTreatment
   requiredResourceVein: !resource resource_water
   extractionLevel: 2
@@ -153,7 +126,6 @@ ice_mine_purification_plant_3:
   description: BE_building_ice_purification_plant_desc_3
   droneCapacity: 1
   healthLossPerDay: 0.05
-  #knowledge: !knowledge knowledge_thermal_plant
   maxHealth: 200.0
   name: BE_building_ice_purification_plant_name_3
   outputQuantity: 0
@@ -178,13 +150,11 @@ ice_mine_purification_plant_3:
   needsEvenTerrain: true
   extendsPipesCluster: false
   pipesClusterRadius: 250
-  #waterNeededFactor: 0.0 #0.2
-  #waterNeededRadius: 0.0
   categorySoundOverride: Sfx_Gameplay_BuildingBIP_Life_WaterTreatment
   requiredResourceVein: !resource resource_water
   extractionLevel: 3
   powerConsumption: 20.0
-  powerPriority: 3.0    
+  powerPriority: 3.0
   isUpgradeTo:
     - !building ice_mine_purification_plant_2
   displayInputs:
@@ -224,32 +194,26 @@ building_crater_lake:
     - Progress_Torus_20x2
   needsEvenTerrain: false
   pipesConsumption: 20
+  humidityRadius: 2
+  humidityPercentage: 0.1
   categorySoundOverride: Sfx_Gameplay_BuildingBIP_Life_WaterTreatment
 
 
+# Water flow enhancement patches -- inputResources and pipesConsumption
+# are now handled dynamically by WaterWorkFix C# companion (enhancement_Water_flow).
+# Food factories keep their static overrides (terrain + cluster radius).
+
 building_food_factory:
-  !replace inputResources:
-    !resource resource_chemicals: 1
-  pipesConsumption: 5
   needsEvenTerrain: true
   extendsPipesCluster: false
   pipesClusterRadius: 200
-
-
 
 building_food_factory_3:
-  !replace inputResources:
-    !resource resource_chemicals: 1
-  pipesConsumption: 5
   needsEvenTerrain: true
   extendsPipesCluster: false
   pipesClusterRadius: 200
 
-
 building_food_factory_2:
-  !replace inputResources:
-    !resource resource_chemicals: 1
-  pipesConsumption: 5
   needsEvenTerrain: true
   extendsPipesCluster: false
-  pipesClusterRadius: 200    
+  pipesClusterRadius: 200

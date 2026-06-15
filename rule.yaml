@@ -1,7 +1,4 @@
-# Fires once after day 1 if WaterWorkFix companion C# mod is not detected.
-# WaterWorkFix sets $waterworkfix_companion_loaded = true on first building tick;
-# if the DLL is missing that flag is never set, triggering the install popup.
-rule_check_waterworkfix_companion:
+﻿rule_check_waterworkfix_companion:
   actions:
     - arguments:
         - popup_missing_waterworkfix
